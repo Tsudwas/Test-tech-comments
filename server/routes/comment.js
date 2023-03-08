@@ -14,8 +14,8 @@ const router = express.Router();
 router.get('/comments', getAllComments);
 router.get('/:mediaId/', getMediaComments);
 router.post('/:mediaId/', postComment);
-router.put('/:mediaId/', rateComment);
-router.put('/:mediaId/reply', replyToComment);
+router.put('/:commentId/rate', rateComment);
+router.put('/:commentId/reply', replyToComment);
 router.delete('/:commentId/', deleteComment);
 
 export default router;
